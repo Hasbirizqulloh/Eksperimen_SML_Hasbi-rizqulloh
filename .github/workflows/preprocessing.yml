@@ -29,9 +29,3 @@ jobs:
       - name: 🚀 Run preprocessing script
         run: |
           python automate_HasbiRizqulloh.py
-
-      - name: 📤 Upload processed files
-        uses: actions/upload-artifact@v3
-        with:
-          name: processed-data
-          path: processed_data/

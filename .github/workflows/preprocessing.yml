@@ -5,7 +5,7 @@ on:
     paths:
       - 'preprocessing/automate_Hasbi-rizqulloh.py'
       - 'obesity_data.csv'
-      - '.workflow/preprocessing.yml'
+      - 'workflows/preprocessing.yml'
   workflow_dispatch:
 
 jobs:

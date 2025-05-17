@@ -28,7 +28,7 @@ jobs:
 
       - name: 🚀 Run preprocessing script
         run: |
-          python automate_Hasbi-rizqulloh.py
+          python preprocessing/automate_Hasbi-rizqulloh.py
 
       - name: 📂 List processed files
         run: |

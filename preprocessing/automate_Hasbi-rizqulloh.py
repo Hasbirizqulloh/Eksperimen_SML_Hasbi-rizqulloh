@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import os
 import pickle
 
-def load_data(path='obesity_data.csv'):
+def load_data(path='../obesity_data.csv'):
     
     df = pd.read_csv(path)
     return df
@@ -31,14 +31,14 @@ def split_data(df, target='ObesityCategory', test_size=0.2, random_state=42):
     )
     return X_train, X_test, y_train, y_test
 
-def save_processed_data(X_train, X_test, y_train, y_test, output_dir='processed_data'):
+def save_processed_data(X_train, X_test, y_train, y_test, output_dir='obesity_preprocessing'):
     os.makedirs(output_dir, exist_ok=True)
     X_train.to_csv(f'{output_dir}/X_train.csv', index=False)
     X_test.to_csv(f'{output_dir}/X_test.csv', index=False)
     y_train.to_csv(f'{output_dir}/y_train.csv', index=False)
     y_test.to_csv(f'{output_dir}/y_test.csv', index=False)
 
-def save_encoder_scaler(le_gender, le_obesity, scaler, output_dir='processed_data'):
+def save_encoder_scaler(le_gender, le_obesity, scaler, output_dir='obesity_preprocessing'):
     with open(f'{output_dir}/label_encoder_gender.pkl', 'wb') as f:
         pickle.dump(le_gender, f)
     with open(f'{output_dir}/label_encoder_obesity.pkl', 'wb') as f:
@@ -55,7 +55,7 @@ def main():
     save_processed_data(X_train, X_test, y_train, y_test)
     save_encoder_scaler(le_gender, le_obesity, scaler)
 
-    print("✅ Preprocessing selesai. Data tersimpan di folder 'processed_data'.")
+    print("✅ Preprocessing selesai. Data tersimpan di folder 'obesity_preprocessing'.")
 
 if __name__ == "__main__":
     main()

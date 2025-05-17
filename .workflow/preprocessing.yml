@@ -32,4 +32,4 @@ jobs:
 
       - name: 📂 List processed files
         run: |
-          ls -R processed_data/
+          ls -R preprocessing/obesity_preprocessing

@@ -10,7 +10,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 def load_data(path='./obesity_data.csv'): 
     
     ''' 
-    kepada reviewer, apabila di run di lokal ganti ./obesity_data.csv menjadi ../obesity_data.csv apabila di run dilokal 
+    kepada reviewer, apabila di run di lokal error, ganti ./obesity_data.csv menjadi ../obesity_data.csv 
     karena ada perbedaan working directory (direktori kerja) 
     antara saat menjalankan skrip secara lokal dan saat dijalankan di lingkungan lain (github action)
     '''

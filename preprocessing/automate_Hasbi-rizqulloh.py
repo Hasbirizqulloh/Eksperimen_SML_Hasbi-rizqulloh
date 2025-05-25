@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import os
 import pickle
 
-def load_data(path='./obesity_data.csv'):
+def load_data(path='../obesity_data.csv'):
     
     df = pd.read_csv(path)
     return df

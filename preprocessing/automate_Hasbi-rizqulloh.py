@@ -4,7 +4,16 @@ from sklearn.model_selection import train_test_split
 import os
 import pickle
 
-def load_data(path='./obesity_data.csv'):
+# Tentukan path absolut berdasarkan lokasi file ini
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def load_data(path='./obesity_data.csv'): 
+    
+    ''' 
+    kepada reviewer, apabila di run di lokal ganti ./obesity_data.csv menjadi ../obesity_data.csv apabila di run dilokal 
+    karena ada perbedaan working directory (direktori kerja) 
+    antara saat menjalankan skrip secara lokal dan saat dijalankan di lingkungan lain (github action)
+    '''
     
     df = pd.read_csv(path)
     return df

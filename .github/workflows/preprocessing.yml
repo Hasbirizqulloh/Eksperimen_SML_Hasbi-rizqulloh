@@ -2,11 +2,9 @@ name: Run Preprocessing Automatically
 
 on:
   push:
-    paths:
-      - 'automate_Hasbi-rizqulloh.py'
-      - 'obesity_data.csv'
-      - '.github/workflows/preprocessing.yml'
-  workflow_dispatch:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   preprocess:
